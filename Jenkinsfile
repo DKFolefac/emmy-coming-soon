@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        stage('Build Angular App') {
+        stage('Build') {
             steps {
                 // Build the Angular app
                 sh 'npm run build'
