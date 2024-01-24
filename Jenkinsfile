@@ -5,6 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Check out the source code from your repository
+                sh 'git pull https://github.com/DKFolefac/emmy-coming-soon.git/'
                 checkout scm
             }
         }
