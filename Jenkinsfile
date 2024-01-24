@@ -27,7 +27,7 @@ pipeline {
     post {
         success {
             // Define post-build actions, if needed
-            emailext body: 'done', subject: 'emmy', to: 'banlonjones@gmail.com'
+            emailext body: 'done', subject: 'emmy', to: 'banlonjones@gmail.com fomenkykelly21@gmail.com'
             // For example, you can archive the build artifacts
             archiveArtifacts(allowEmptyArchive: true, artifacts: 'dist/**')
         }
