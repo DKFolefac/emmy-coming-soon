@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    
+    triggers {
+         pollSCM '* * * * *'
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -21,6 +24,13 @@ pipeline {
             steps {
                 // Build the Angular app
                 sh 'npm run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "testing"
+                sh 'npm run test'
             }
         }
     }
