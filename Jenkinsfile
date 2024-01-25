@@ -9,6 +9,7 @@ pipeline {
             steps {
                 // Use Node.js and npm installed on the Jenkins agent
                 sh 'npm install'
+                sh 'npm install --save --save-exact react-scripts@2.x.x'
             }
         }
 
