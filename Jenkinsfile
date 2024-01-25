@@ -5,14 +5,6 @@ pipeline {
          pollSCM '* * * * *'
     }
     stages {
-        stage('Checkout') {
-            steps {
-                // Check out the source code from your repository
-                sh 'git pull https://github.com/DKFolefac/emmy-coming-soon.git/'
-                checkout scm
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 // Use Node.js and npm installed on the Jenkins agent
@@ -22,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Build the Angular app
+                // Build the App
                 sh 'npm run build'
             }
         }
