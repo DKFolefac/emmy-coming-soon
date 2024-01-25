@@ -10,6 +10,7 @@ pipeline {
                 // Use Node.js and npm installed on the Jenkins agent
                 sh 'npm install'
                 sh 'npm install react-scripts@latest' 
+                sh 'echo "node --version"'
             }
         }
 
