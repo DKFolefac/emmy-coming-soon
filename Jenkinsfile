@@ -10,6 +10,7 @@ pipeline {
                 // Use Node.js and npm installed on the Jenkins agent
                 sh 'npm install'
                 sh 'npm install react-scripts@latest' 
+                sh 'npm install --save-dev @babel/plugin-proposal-private-property-in-object --legacy-peer-deps' 
                 
             }
         }
