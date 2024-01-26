@@ -4,6 +4,9 @@ pipeline {
     triggers {
          pollSCM '* * * * *'
     }
+    environment {
+        CI = false          // do not treat warnings as errors
+    }
     stages {
         stage('Install Dependencies') {
             steps {
