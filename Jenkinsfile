@@ -25,11 +25,11 @@ pipeline {
                 sh 'npm run build'
             }
         } 
-        #stage('dockerising) {
-            #steps {
-                #//containerise
-                #sh 'docker login -u  DKFolefac      -p
-                #sh 'docker build -t Emmyride:
+        // stage('dockerising) {
+            // steps {
+                // containerise
+                // sh 'docker login -u  DKFolefac      -p
+                // sh 'docker build -t Emmyride:
 
         
             
