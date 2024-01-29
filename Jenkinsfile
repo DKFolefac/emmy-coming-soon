@@ -30,9 +30,9 @@ pipeline {
             steps {
                 // containerise
                 sh 'docker login -u dkfolefac -p Rashford@123'
-                sh 'docker build -t Emmyride:40 .'
-                sh 'docker tag Emmyride:40 dkfolefac/Emmyride:40'
-                sh 'docker push dkfolefac/Emmyride:40'
+                sh 'docker build -t emmyridej:40 .'
+                sh 'docker tag emmyridej:40 dkfolefac/Emmyridej:40'
+                sh 'docker push dkfolefac/Emmyridej:40'
             }
             
         }   
