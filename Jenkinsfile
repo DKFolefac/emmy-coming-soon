@@ -14,6 +14,7 @@ pipeline {
                 sh 'npm install'
                 sh 'npm install react-scripts@latest' 
                 sh 'npm install --save-dev @babel/plugin-proposal-private-property-in-object --legacy-peer-deps' 
+                sh 'echo BUILD_NUMBER'
                 
             }
         }
@@ -23,7 +24,12 @@ pipeline {
                 // Build the App
                 sh 'npm run build'
             }
-        }
+        } 
+        #stage('dockerising) {
+            #steps {
+                #//containerise
+                #sh 'docker login -u  DKFolefac      -p
+                #sh 'docker build -t Emmyride:
 
         
             
