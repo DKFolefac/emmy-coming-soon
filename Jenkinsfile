@@ -14,7 +14,7 @@ pipeline {
                 sh 'npm install'
                 sh 'npm install react-scripts@latest' 
                 sh 'npm install --save-dev @babel/plugin-proposal-private-property-in-object --legacy-peer-deps' 
-                sh 'echo BUILD_NUMBER'
+                sh 'echo ${BUILD_NUMBER}'
                 
             }
         }
