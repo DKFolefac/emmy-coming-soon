@@ -23,13 +23,19 @@ pipeline {
             steps {
                 // Build the App
                 sh 'npm run build'
+                
             }
         } 
-        // stage('dockerising) {
-            // steps {
-                // containerise
-                // sh 'docker login -u  DKFolefac      -p
-                // sh 'docker build -t Emmyride:
+        stage('dockerising') {
+            steps {
+                containerise
+                sh 'docker login -u dkfolefac -p Rashford@123
+                sh 'docker build -t Emmyride:40'
+                sh 'docker tag Emmyride:40 dkfolefac/Emmyride:40'
+                sh 'docker push Emmyride/Emmyride:40'
+            }
+            
+        }   
 
         
             
